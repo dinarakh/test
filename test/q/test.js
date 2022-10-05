@@ -1,18 +1,16 @@
-
+// Nu i nazvaniya blyat
 function getBTC(){
-    zxc();
-    zxc1();
+  zxc();
+  zxc1();
 }
+
 function zxc(){
-    fetch("https://api.coindesk.com/v1/bpi/currentprice.json")
-    .then(res => res.json())
-    .then(data => 
-       // document.getElementById('chop-chop').innerHTML = (Object(data.bpi.USD.rate))
-        console.log(Object(data))
-       
-        ).catch(erorr =>{
-            console.log(erorr)
-        })
+  const apiUrl = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+  axios.get(apiUrl).then(res => {
+	const data = res.data;
+	const btcPriceInUsd = data.bpi.USD.rate;
+    console.log(btcPriceInUsd);	
+  });
 }
 
 function zxc1(){
