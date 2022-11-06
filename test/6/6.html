@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <title>car</title>
+  <script src="../6/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="../6/ccs/style.css" type="text/css" rel="stylesheet" />
+    
+  </script>
+</head>
+
+<body>
+  
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event,'AddCar',1)">Add car</button>
+    <button onclick="cars()">Cars</button>
+  </div>
+
+  <div id="empty" class="tabcontent"></div>
+
+  <div id="AddCar" class="tabcontent">
+
+    <div>
+      <p class="name">name</p>
+      <input type="text" id="NameCar">
+    </div>
+    <div>
+      <p class="name">color</p>
+      <input type="text" id="ColorCar">
+    </div>
+
+    <div>
+      <p class="name">steering wheel</p>
+      <select name="steering wheel" id="SteeringWCar">
+        <option value="none"></option>
+        <option value="right">right</option>
+        <option value="left">left</option>
+      </select>
+    </div>
+    <div>
+      <p class="name">Transmission</p>
+      <select name="Transmission" id="Transmission">
+        <option value="none"></option>
+        <option value="Mechanics">Mechanics</option>
+        <option value="Automatics">Automatics</option>
+      </select>
+    </div>
+    <button onclick="addCars(1)">тыкай</button>
+  </div>
+
+</body>
+
+</html>
