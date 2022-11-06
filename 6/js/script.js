@@ -45,9 +45,15 @@ function openTab(evt, tabName,) {
 }
 
 function cars(){
-  var d = JSON.stringify(data)
-  console.log(data)
-
+  data = JSON.parse(localStorage.getItem('data'));
+  document.write('<select name="car" id="car"> value=""');
+  for(let i=0; i< data.length;i++){
+    console.log(data[i].name);
+    let dataName= data[i].name;
+    document.write(' <option value="'+dataName+'">'+dataName+'</option>');
+  }
+  document.write(' </select>');
+  let car = document.getElementById('car').value;
 }
 
 
@@ -112,8 +118,3 @@ function addCars(err){
     localStorage.setItem('data', local);
   }
 } 
-
-function locall(){
-  let zxc=localStorage.getItem('person')
-  console.log(JSON.parse(zxc));
-}
