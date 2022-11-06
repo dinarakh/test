@@ -10,10 +10,10 @@
 </head>
 
 <body>
-
+  
   <div class="tab">
     <button class="tablinks" onclick="openTab(event,'AddCar',1)">Add car</button>
-    <button class="tablinks" onclick="openTab(event,'Car')"> Cars </button>
+    <button onclick="cars()">Cars</button>
   </div>
 
   <div id="empty" class="tabcontent"></div>
@@ -37,7 +37,6 @@
         <option value="left">left</option>
       </select>
     </div>
-
     <div>
       <p class="name">Transmission</p>
       <select name="Transmission" id="Transmission">
@@ -49,12 +48,6 @@
     <button onclick="addCars(1)">тыкай</button>
   </div>
 
-
-  <div id="Car" class="tabcontent">
-    <p class="name">Cars</p>
-    <br>
-    <button onclick="cars()">жмых</button>
-  </div>
 </body>
 
 </html>

@@ -1,19 +1,13 @@
 var data = 
-[
-    {
-      "name":"vaz 2112",
-    "color":"gray",
-    "steering wheel":"right",
-    "Transmission":"Mechanics"
-    },
-
-    {
-      "name":"vaz 2113",
-      "color":"red",
-      "steering wheel":"right",
-      "Transmission":"Mechanics"
-    }
+[ {
+      "name": "",
+      "color": "",
+      "steering wheel": "",
+      "Transmission": ""
+  }
 ]
+data = JSON.parse(localStorage.getItem('data'));
+
 
 setTimeout(() => {
   var i, tabcontent, tablinks;
@@ -46,6 +40,9 @@ function openTab(evt, tabName,) {
 
 function cars(){
   data = JSON.parse(localStorage.getItem('data'));
+  document.write('<a href=""><button>back</button></a>');
+  document.write('<button onclick="infocar()">run</button>')
+  document.write('<a href="#"><button  onclick="Deletecar()">delete</button></a> <br>')
   document.write('<select name="car" id="car"> value=""');
   for(let i=0; i< data.length;i++){
     console.log(data[i].name);
@@ -53,11 +50,37 @@ function cars(){
     document.write(' <option value="'+dataName+'">'+dataName+'</option>');
   }
   document.write(' </select>');
-  let car = document.getElementById('car').value;
 }
 
-
-
+function infocar(){
+  let car = document.getElementById('car').value;
+  for(let i = 0; i< data.length;i++){
+    if(car == data[i].name){
+      document.write('<p>Car-'+data[i].name+'</p>');
+      document.write('<p>Color-'+data[i].color+'</p>');
+      document.write('<p>Steering wheel-'+data[i]["steering wheel"]+'</p>');
+      document.write('<p>Transmission-'+data[i].Transmission+'</p>');
+      break;
+    }
+  }
+}
+function Deletecar() {
+  let car = document.getElementById('car').value;
+  for(let i = 0; i< data.length;i++){
+    if(car ==  data[i].name){
+      data.splice(i, 1);
+      console.log(data);
+      break;
+    }   
+  }
+  Deletecar2();
+}
+  function Deletecar2(){
+  let local = JSON.stringify(data);
+  localStorage.setItem('data', local);
+  console.log(local);
+}
+//----------------------------------------
  var CarName = "";
  var ColorName = "";
  var SteeringWheelName = "";
