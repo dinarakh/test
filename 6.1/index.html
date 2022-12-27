@@ -1,0 +1,61 @@
+<html>
+  <head>
+  <title>Cars</title>
+  <script src="../6.1/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+  <script>
+    const weather = 'http://api.weatherstack.com/current?access_key=fb4cd1712eae0a9274833243a197a649&query=Ufa';
+    axios.get(weather)
+    .then(res =>{
+      const data = res.data;
+      const tempUfa = data.current.temperature;
+      document.getElementById('temp').innerHTML=tempUfa;
+    })
+    .catch(res => console.log(err))
+  </script>
+  <link href="../6.1/css/style.css" rel="stylesheet"  type="text/css">
+  </head>
+
+  <body>
+    <div id="temp2">
+      <h2 style="display: inline;">Ufa <h2 style="display: inline;" id="temp"></h2><h2 style="display: inline;">°C</h2></h2>
+    </div>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event,'AddCar',1)">Add car</button>
+      <button onclick="cars()">Cars</button>
+    </div>
+
+    <div id="empty" class="tabcontent"></div>
+
+    <div id="AddCar" class="tabcontent">
+
+      <div>
+        <p class="name">name</p>
+        <input type="text" id="NameCar">
+      </div>
+      <div>
+        <p class="name">color</p>
+        <input type="text" id="ColorCar">
+      </div>
+  
+      <div>
+        <p class="name">steering wheel</p>
+        <select name="steering wheel" id="SteeringWCar">
+          <option value="none"></option>
+          <option value="right">right</option>
+          <option value="left">left</option>
+        </select>
+      </div>
+      <div>
+        <p class="name">Transmission</p>
+        <select name="Transmission" id="Transmission">
+          <option value="none"></option>
+          <option value="Mechanics">Mechanics</option>
+          <option value="Automatics">Automatics</option>
+        </select>
+      </div>
+      <button onclick="addcars()">тыкай</button>
+    </div>
+    
+  </body>
+</html>
