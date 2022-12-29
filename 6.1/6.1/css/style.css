@@ -1,0 +1,16 @@
+.carjs{
+  display: flex;
+  
+}
+.text{
+  border: 2px solid black;
+  width: 150px;
+  margin: 0;
+}
+h2{
+  display: inline;
+}
+.name{
+  margin: 0;
+  
+}
