@@ -1,0 +1,100 @@
+* {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 0;
+  font-family: cursive;
+}
+
+head,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url('https://crafty.graphics/wp-content/uploads/2020/12/Ahegao-OFace-Anime-thumb-1-150x150.jpg');
+}
+
+.main {
+  background: url('https://media.tenor.com/exROiz7hSCAAAAAd/doshik.gif')94%;
+  margin: 3% auto 3% auto;
+  padding: 0;
+  height: 650px;
+  width: 80%;
+}
+
+.ggame {
+  height: 90%;
+}
+
+.shet {
+  text-align: center;
+  font-size: 55px;
+}
+
+.bottom-cont {
+  background-color: brown;
+  display: flex;
+}
+
+.bottom-cont-menu {
+  margin: 0px 13% 0 15%;
+  background-color: brown;
+
+}
+
+.bottom-cont :hover .bottom-cont-menu-text {
+  background-color: rgb(155, 66, 66);
+  color: bisque;
+}
+
+.bottom-cont-menu-text {
+  font-size: 33px;
+  margin: 0;
+  padding: 10px;
+}
+
+
+.drop1 {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(125, 24, 24);
+}
+
+.bottom-cont-menu:hover .drop1 {
+  display: block;
+}
+
+.drop1 .drop1-text:hover {
+  background-color: rgb(74, 3, 3);
+  color: white;
+}
+
+.drop1-text {
+  margin: 0;
+}
+
+.drop2 {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(125, 24, 24);
+}
+
+.bottom-cont-menu:hover .drop2 {
+  display: block;
+}
+
+.drop2 .drop2-text:hover {
+  background-color: rgb(74, 3, 3);
+  color: white;
+}
+
+.drop2-text {
+  margin: 0;
+}
